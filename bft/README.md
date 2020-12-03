@@ -6,4 +6,6 @@
 | 4 | Revisiting Fast Practical Byzantine Fault Tolerance                       | https://arxiv.org/pdf/1712.01367.pdf                                          |
 | 5 | Solida: A Blockchain Protocol Based on Reconfigurable Byzantine Consensus | https://arxiv.org/pdf/1612.02916.pdf                                          |
 | 6 | Bosco: One-Step Byzantine Asynchronous Consensus                          | https://www.cs.cornell.edu/projects/Quicksilver/public_pdfs/52180438.pdf      |
-| 7 | State Machine Replication in the Libra Blockchain                         | https://github.com/libra/libra/blob/master/developers.libra.org/docs/assets/papers/libra-consensus-state-machine-replication-in-the-libra-blockchain/2020-05-26.pdf |
+| 7 | State Machine Replication in the Libra Blockchain                         | https://github.com/libra/libra/blob/master/developers.libra.org/docs/assets/papers/libra-
+consensus-state-machine-replication-in-the-libra-blockchain/2020-05-26.pdf |
+| 8 | Proving the Correctness of Multiprocess Programs                          | http://www.cis.umassd.edu/~hxu/courses/cis481/references/Lamport-1977.pdf     |
