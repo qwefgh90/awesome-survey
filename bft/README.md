@@ -9,3 +9,4 @@
 | 7 | State Machine Replication in the Libra Blockchain                         | https://github.com/libra/libra/blob/master/developers.libra.org/docs/assets/papers/libra-consensus-state-machine-replication-in-the-libra-blockchain/2020-05-26.pdf |
 | 8 | Proving the Correctness of Multiprocess Programs                          | http://www.cis.umassd.edu/~hxu/courses/cis481/references/Lamport-1977.pdf     |
 | 9 | Revisiting Fast Practical Byzantine Fault Tolerance                       | https://arxiv.org/pdf/1712.01367.pdf                                          |
+| 10 | Tendermint: Byzantine Fault Tolerance in the Age of Blockchains | http://knowen-production.s3.amazonaws.com/uploads/attachment/file/1814/Buchman_Ethan_201606_Msater%2Bthesis.pdf |
