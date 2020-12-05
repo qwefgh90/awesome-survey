@@ -1,0 +1,305 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.9.8)  5 DEC 2020 21:53
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**d:/대학원/2020-2학기/논문작성법/과제/awesome-survey/bft/paper/survey/template.tex
+(d:/대학원/2020-2학기/논문작성법/과제/awesome-survey/bft/paper/survey/template.tex
+LaTeX2e <2020-02-02> patch level 5
+L3 programming layer <2020-09-03>
+
+LaTeX Warning: File `example.eps' already exists on the system.
+               Not generating it from this source.
+
+(c:/texlive/2020/texmf-dist/tex/latex/base/fix-cm.sty
+Package: fix-cm 2015/01/14 v1.1t fixes to LaTeX
+ (c:/texlive/2020/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
+)) (d:/대학원/2020-2학기/논문작성법/과제/awesome-survey/bft/paper/survey/svjour3.cls
+Document Class: svjour3 2007/05/08 v3.2 
+LaTeX document class for Springer journals
+Class Springer-SVJour3 Info: extra/valid Springer sub-package (-> *.clo) 
+(Springer-SVJour3)           not found in option list of \documentclass
+(Springer-SVJour3)           - autoactivating "global" style.
+(d:/대학원/2020-2학기/논문작성법/과제/awesome-survey/bft/paper/survey/svglov3.clo
+File: svglov3.clo 2009/12/18 v3.2 style option for standardised journals
+
+SVJour Class option: svglov3.clo for standardised journals
+)
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 147.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 148.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 149.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 150.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 151.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 152.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 153.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 154.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 155.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 156.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 157.
+\logodepth=\dimen134
+\headerboxheight=\dimen135
+\betweenumberspace=\dimen136
+\aftertext=\dimen137
+\headlineindent=\dimen138
+\c@inst=\count168
+\c@auth=\count169
+\instindent=\dimen139
+\authrun=\box45
+\authorrunning=\toks15
+\titrun=\box46
+\titlerunning=\toks16
+\combirun=\box47
+\c@lastpage=\count170
+\rubricwidth=\dimen140
+\c@section=\count171
+\c@subsection=\count172
+\c@subsubsection=\count173
+\c@paragraph=\count174
+\c@subparagraph=\count175
+\spthmsep=\dimen141
+\c@theorem=\count176
+\c@case=\count177
+\c@conjecture=\count178
+\c@corollary=\count179
+\c@definition=\count180
+\c@example=\count181
+\c@exercise=\count182
+\c@lemma=\count183
+\c@note=\count184
+\c@problem=\count185
+\c@property=\count186
+\c@proposition=\count187
+\c@question=\count188
+\c@solution=\count189
+\c@remark=\count190
+\c@figure=\count191
+\c@table=\count192
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\figcapgap=\dimen142
+\tabcapgap=\dimen143
+\figgap=\dimen144
+\bibindent=\dimen145
+\@tempcntc=\count193
+) (c:/texlive/2020/texmf-dist/tex/latex/cjk-ko/kotex.sty
+Package: kotex 2015/04/19 v1.6 Korean TeX (ko.TeX)
+ (c:/texlive/2020/texmf-dist/tex/latex/kotex-utf/kotex.cfg) (c:/texlive/2020/texmf-dist/tex/latex/kotex-utf/kotexutf.sty
+Package: kotexutf 2015/07/18 v2.1.1 typesetting UTF-8 Korean documents
+ (c:/texlive/2020/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks17
+\inpenc@posthook=\toks18
+) (c:/texlive/2020/texmf-dist/tex/plain/kotex-plain/kotexutf-core.tex
+\unih@ngulpoint=\count194
+\dhucs@emph@raise=\dimen146
+)
+Now handling font encoding LUC ...
+... processing UTF-8 mapping file for font encoding LUC
+ (c:/texlive/2020/texmf-dist/tex/latex/kotex-utf/lucenc.dfu
+File: lucenc.dfu 2007/09/05 UTF-8 support for dhucs
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+   defining Unicode char U+3001 (decimal 12289)
+   defining Unicode char U+3002 (decimal 12290)
+   defining Unicode char U+3008 (decimal 12296)
+   defining Unicode char U+3009 (decimal 12297)
+   defining Unicode char U+300A (decimal 12298)
+   defining Unicode char U+300B (decimal 12299)
+   defining Unicode char U+300C (decimal 12300)
+   defining Unicode char U+300D (decimal 12301)
+   defining Unicode char U+300E (decimal 12302)
+   defining Unicode char U+300F (decimal 12303)
+   defining Unicode char U+3010 (decimal 12304)
+   defining Unicode char U+3011 (decimal 12305)
+   defining Unicode char U+3014 (decimal 12308)
+   defining Unicode char U+3015 (decimal 12309)
+   defining Unicode char U+3016 (decimal 12310)
+   defining Unicode char U+3017 (decimal 12311)
+   defining Unicode char U+3018 (decimal 12312)
+   defining Unicode char U+3019 (decimal 12313)
+   defining Unicode char U+301A (decimal 12314)
+   defining Unicode char U+301B (decimal 12315)
+   defining Unicode char U+FF01 (decimal 65281)
+   defining Unicode char U+FF08 (decimal 65288)
+   defining Unicode char U+FF09 (decimal 65289)
+   defining Unicode char U+FF0C (decimal 65292)
+   defining Unicode char U+FF0E (decimal 65294)
+   defining Unicode char U+FF1A (decimal 65306)
+   defining Unicode char U+FF1B (decimal 65307)
+   defining Unicode char U+FF1C (decimal 65308)
+   defining Unicode char U+FF1D (decimal 65309)
+   defining Unicode char U+FF1E (decimal 65310)
+   defining Unicode char U+FF1F (decimal 65311)
+   defining Unicode char U+FF3B (decimal 65339)
+   defining Unicode char U+FF3D (decimal 65341)
+   defining Unicode char U+FF5B (decimal 65371)
+   defining Unicode char U+FF5D (decimal 65373)
+   defining Unicode char U+FF61 (decimal 65377)
+   defining Unicode char U+FF62 (decimal 65378)
+   defining Unicode char U+FF63 (decimal 65379)
+   defining Unicode char U+FF64 (decimal 65380)
+   defining Unicode char U+FF65 (decimal 65381)
+)
+\@josa=\count195
+\josatoks=\toks19
+ (c:/texlive/2020/texmf-dist/tex/latex/cjk-ko/kolabels-utf.sty
+Package: kolabels-utf 2015/03/20 v1.5 UTF-8 Hangul item labels
+))) (c:/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+ (c:/texlive/2020/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks20
+) (c:/texlive/2020/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+ (c:/texlive/2020/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) (c:/texlive/2020/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+ (c:/texlive/2020/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/08/26 v1.2 Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen147
+\Gin@req@width=\dimen148
+) (c:/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2020-09-01 L3 backend support: PDF output (pdfTeX)
+\l__kernel_color_stack_int=\count196
+\l__pdf_internal_box=\box48
+) (d:/대학원/2020-2학기/논문작성법/과제/awesome-survey/bft/paper/survey/template.aux)
+\openout1 = `template.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for LUC/nanummj/m/n on input line 64.
+LaTeX Font Info:    Trying to load font information for LUC+nanummj on input line 64.
+ (c:/texlive/2020/texmf-dist/tex/latex/nanumtype1/lucnanummj.fd
+File: lucnanummj.fd 2013/02/12 v0.1 Nanum Myeongjo font definitions
+)
+LaTeX Font Info:    ... okay on input line 64.
+
+Unknown journal: specify \journalname{<name of your journal>} in preambel
+
+(c:/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count197
+\scratchdimen=\dimen149
+\scratchbox=\box49
+\nofMPsegments=\count198
+\nofMParguments=\count199
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count266
+\MPscratchDim=\dimen150
+\MPnumerator=\count267
+\makeMPintoPDFobject=\count268
+\everyMPtoPDFconversion=\toks22
+) (c:/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (c:/texlive/2020/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+SVJour3 warning: Missing \journalname
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 95.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 95.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 95.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 95.
+LaTeX Font Info:    Trying to load font information for LUC+uhcmj on input line 121.
+(c:/texlive/2020/texmf-dist/tex/latex/kotex-utf/lucuhcmj.fd
+File: lucuhcmj.fd 2013/09/26 UHC Myeongjo font definitions
+)
+
+LaTeX Warning: Citation `RefB' on page 1 undefined on input line 123.
+
+
+LaTeX Warning: Citation `RefJ' on page 1 undefined on input line 123.
+
+
+LaTeX Warning: Reference `sec:1' on page 1 undefined on input line 127.
+
+[1{c:/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Package epstopdf Info: Source file: <example.eps>
+(epstopdf)                    date: 2008-06-12 09:01:30
+(epstopdf)                    size: 304 bytes
+(epstopdf)             Output file: <example-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-12-05 18:16:55
+(epstopdf)                    size: 2705 bytes
+(epstopdf)             Command: <repstopdf --outfile=example-eps-converted-to.pdf example.eps>
+(epstopdf)             \includegraphics on input line 137.
+Package epstopdf Info: Output file is already uptodate.
+<example-eps-converted-to.pdf, id=53, 202.7575pt x 202.7575pt>
+File: example-eps-converted-to.pdf Graphic file (type pdf)
+<use example-eps-converted-to.pdf>
+Package pdftex.def Info: example-eps-converted-to.pdf  used on input line 137.
+(pdftex.def)             Requested size: 202.757pt x 202.757pt.
+Package epstopdf Info: Source file: <example.eps>
+(epstopdf)                    date: 2008-06-12 09:01:30
+(epstopdf)                    size: 304 bytes
+(epstopdf)             Output file: <example-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-12-05 18:16:55
+(epstopdf)                    size: 2705 bytes
+(epstopdf)             Command: <repstopdf --outfile=example-eps-converted-to.pdf example.eps>
+(epstopdf)             \includegraphics on input line 147.
+Package epstopdf Info: Output file is already uptodate.
+File: example-eps-converted-to.pdf Graphic file (type pdf)
+<use example-eps-converted-to.pdf>
+Package pdftex.def Info: example-eps-converted-to.pdf  used on input line 147.
+(pdftex.def)             Requested size: 253.5pt x 253.50812pt.
+
+
+LaTeX Warning: Citation `RefB' on page 2 undefined on input line 171.
+
+
+LaTeX Warning: Citation `RefJ' on page 2 undefined on input line 171.
+
+
+LaTeX Warning: Citation `RefB' on page 2 undefined on input line 175.
+
+
+LaTeX Warning: Citation `RefJ' on page 2 undefined on input line 175.
+
+[2 <d:/대학원/2020-2학기/논문작성법/과제/awesome-survey/bft/paper/survey/example-eps-converted-to.pdf>] [3] (d:/대학원/2020-2학기/논문작성법/과제/awesome-survey/bft/paper/survey/template.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 2097 strings out of 480880
+ 33398 string characters out of 5911595
+ 274438 words of memory out of 5000000
+ 17662 multiletter control sequences out of 15000+600000
+ 555726 words of font info for 98 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 36i,7n,33p,296b,322s stack positions out of 5000i,500n,10000p,200000b,80000s
+<c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjbac.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjbb1.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjbb8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjbbb.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjbbd.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjbc1.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjbcd.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjbd1.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmac.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmad.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmae.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb0.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb1.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb2.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb3.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb4.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb5.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb6.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb9.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmba.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmbb.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmbc.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmbd.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmbe.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc0.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc1.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc2.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc5.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc6.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc9.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmcc.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmcd.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmce.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd0.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd1.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd2.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd3.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd5.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd6.pfb><c:/texlive/2020/texmf-dist/fonts/type1/uhc/umj/umj02.pfb>
+Output written on d:/대학원/2020-2학기/논문작성법/과제/awesome-survey/bft/paper/survey/template.pdf (3 pages, 2005678 bytes).
+PDF statistics:
+ 230 PDF objects out of 1000 (max. 8388607)
+ 169 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+
