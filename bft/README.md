@@ -11,3 +11,4 @@
 | 9 | Revisiting Fast Practical Byzantine Fault Tolerance                       | https://arxiv.org/pdf/1712.01367.pdf                                          |
 | 10 | Tendermint: Byzantine Fault Tolerance in the Age of Blockchains | http://knowen-production.s3.amazonaws.com/uploads/attachment/file/1814/Buchman_Ethan_201606_Msater%2Bthesis.pdf |
 | 11 | Consensus in the Presence of Partial Synchrony | https://groups.csail.mit.edu/tds/papers/Lynch/jacm88.pdf |
+| 12 | Bitcoin: A Peer-to-Peer Electronic Cash System | https://bitcoin.org/bitcoin.pdf |
