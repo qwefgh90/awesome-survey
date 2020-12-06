@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.9.8)  6 DEC 2020 00:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.9.8)  6 DEC 2020 18:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -218,14 +218,36 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 SVJour3 warning: Missing \journalname
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 95.
+(Font)              <7> on input line 94.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 95.
+(Font)              <5> on input line 94.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 95.
+(Font)              <8> on input line 94.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 95.
-[1{c:/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
+(Font)              <6> on input line 94.
+[1{c:/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (5.06319pt too wide) in paragraph at lines 183--190
+[]\LUC/nanummj/m/n/10/be ^^T\LUC/nanummj/m/n/10/b8 ]\LUC/nanummj/m/n/10/cc �\LUC/nanummj/m/n/10/c7 x \LUC/nanummj/m/n/10/bd �\LUC/nanummj/m/n/10/c5 |�\LUC/nanummj/m/n/10/c1 ^^\ \LUC/nanummj/m/n/10/c0 �\LUC/nanummj/m/n/10/c6 �\LUC/nanummj/m/n/10/b4 ^^X\LUC/nanummj/m/n/10/ae 0\LUC/nanummj/m/n/10/b3 � \LUC/nanummj/m/n/10/d5 X\LUC/nanummj/m/n/10/b2 � \LUC/nanummj/m/n/10/ac ^^@\LUC/nanummj/m/n/10/c7 � \LUC/nanummj/m/n/10/b1 ^^P\LUC/nanummj/m/n/10/b9 � \LUC/nanummj/m/n/10/c5 L\LUC/nanummj/m/n/10/b8 $\LUC/nanummj/m/n/10/c9 � \OT1/cmr/m/n/10 PBFT(Practical Byzan-
+ []
+
+[2] [3]
+LaTeX Font Info:    Font shape `LUC/nanummj/m/it' in size <10> not available
+(Font)              Font shape `LUC/nanummj/m/sl' tried instead on input line 243.
+ [4]
+Package epstopdf Info: Source file: <pbft.eps>
+(epstopdf)                    date: 2020-12-06 14:38:38
+(epstopdf)                    size: 4201562 bytes
+(epstopdf)             Output file: <pbft-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-12-06 14:40:32
+(epstopdf)                    size: 87440 bytes
+(epstopdf)             Command: <repstopdf --outfile=pbft-eps-converted-to.pdf pbft.eps>
+(epstopdf)             \includegraphics on input line 310.
+Package epstopdf Info: Output file is already uptodate.
+<pbft-eps-converted-to.pdf, id=93, 482.80376pt x 222.8325pt>
+File: pbft-eps-converted-to.pdf Graphic file (type pdf)
+<use pbft-eps-converted-to.pdf>
+Package pdftex.def Info: pbft-eps-converted-to.pdf  used on input line 310.
+(pdftex.def)             Requested size: 338.0pt x 156.00548pt.
 Package epstopdf Info: Source file: <example.eps>
 (epstopdf)                    date: 2008-06-12 09:01:30
 (epstopdf)                    size: 304 bytes
@@ -233,40 +255,30 @@ Package epstopdf Info: Source file: <example.eps>
 (epstopdf)                    date: 2020-12-05 18:16:55
 (epstopdf)                    size: 2705 bytes
 (epstopdf)             Command: <repstopdf --outfile=example-eps-converted-to.pdf example.eps>
-(epstopdf)             \includegraphics on input line 199.
+(epstopdf)             \includegraphics on input line 340.
 Package epstopdf Info: Output file is already uptodate.
-<example-eps-converted-to.pdf, id=55, 202.7575pt x 202.7575pt>
+<example-eps-converted-to.pdf, id=94, 202.7575pt x 202.7575pt>
 File: example-eps-converted-to.pdf Graphic file (type pdf)
 <use example-eps-converted-to.pdf>
-Package pdftex.def Info: example-eps-converted-to.pdf  used on input line 199.
-(pdftex.def)             Requested size: 202.757pt x 202.757pt.
-Package epstopdf Info: Source file: <example.eps>
-(epstopdf)                    date: 2008-06-12 09:01:30
-(epstopdf)                    size: 304 bytes
-(epstopdf)             Output file: <example-eps-converted-to.pdf>
-(epstopdf)                    date: 2020-12-05 18:16:55
-(epstopdf)                    size: 2705 bytes
-(epstopdf)             Command: <repstopdf --outfile=example-eps-converted-to.pdf example.eps>
-(epstopdf)             \includegraphics on input line 209.
-Package epstopdf Info: Output file is already uptodate.
-File: example-eps-converted-to.pdf Graphic file (type pdf)
-<use example-eps-converted-to.pdf>
-Package pdftex.def Info: example-eps-converted-to.pdf  used on input line 209.
+Package pdftex.def Info: example-eps-converted-to.pdf  used on input line 340.
 (pdftex.def)             Requested size: 253.5pt x 253.50812pt.
- [3 <d:/대학원/2020-2학기/논문작성법/과제/awesome-survey/bft/paper/survey/example-eps-converted-to.pdf>] [4] (d:/대학원/2020-2학기/논문작성법/과제/awesome-survey/bft/paper/survey/template.aux) ) 
+ [5]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6 <d:/대학원/2020-2학기/논문작성법/과제/awesome-survey/bft/paper/survey/pbft-eps-converted-to.pdf> <d:/대학원/2020-2학기/논문작성법/과제/awesome-survey/bft/paper/survey/example-eps-converted-to.pdf>] [7] (d:/대학원/2020-2학기/논문작성법/과제/awesome-survey/bft/paper/survey/template.aux) ) 
 Here is how much of TeX's memory you used:
- 2086 strings out of 480880
- 33217 string characters out of 5911595
- 277510 words of memory out of 5000000
- 17655 multiletter control sequences out of 15000+600000
- 555198 words of font info for 97 fonts, out of 8000000 for 9000
+ 2165 strings out of 480880
+ 34695 string characters out of 5911595
+ 278502 words of memory out of 5000000
+ 17712 multiletter control sequences out of 15000+600000
+ 569458 words of font info for 145 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,7n,33p,296b,322s stack positions out of 5000i,500n,10000p,200000b,80000s
-<c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjbac.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjbb1.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjbb8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjbbb.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjbbd.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjbc1.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjbcd.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjbd1.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmac.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmad.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmae.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb0.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb1.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb2.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb3.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb4.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb5.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb6.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb9.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmba.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmbb.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmbc.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmbd.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmbe.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmbf.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc0.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc1.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc2.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc5.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc6.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc9.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmcc.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmcd.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmce.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmcf.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd0.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd1.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd2.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd3.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd4.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd5.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd6.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd7.pfb>
-Output written on d:/대학원/2020-2학기/논문작성법/과제/awesome-survey/bft/paper/survey/template.pdf (4 pages, 2302361 bytes).
+ 36i,8n,33p,296b,322s stack positions out of 5000i,500n,10000p,200000b,80000s
+<c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjbac.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjbb1.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjbb2.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjbb3.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjbb8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjbb9.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjbbb.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjbbc.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjbbd.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjbbe.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjbc0.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjbc1.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjbc2.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjbc5.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjbc6.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjbc7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjbc8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjbc9.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjbcc.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjbcd.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjbd0.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjbd1.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjbd2.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjbd5.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmac.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmac.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmad.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmae.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb0.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb1.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb2.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb3.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb4.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb5.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb6.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb9.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmba.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmbb.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmbc.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmbd.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmbe.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmbf.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc0.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc1.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc2.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc3.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc4.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc5.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc6.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc9.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmca.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmcc.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmcd.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmce.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmcf.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd0.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd1.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd2.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd3.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd4.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd5.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd6.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd7.pfb>
+Output written on d:/대학원/2020-2학기/논문작성법/과제/awesome-survey/bft/paper/survey/template.pdf (7 pages, 3180661 bytes).
 PDF statistics:
- 245 PDF objects out of 1000 (max. 8388607)
- 180 compressed objects within 2 object streams
+ 357 PDF objects out of 1000 (max. 8388607)
+ 262 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
