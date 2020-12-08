@@ -61,8 +61,11 @@ grestore
 % Insert the name of "your journal" with
 % \journalname{myjournal}
 %
+
 \begin{document}
 
+\bibliographystyle{spbasic} % Choose Phys. Rev. style for bibliography
+ 
 \title{비잔틴 장애를 허용하는 실용적인 상태 복제 알고리즘에 대한 조사 및 분석%\thanks{Grants or other notes
 %about the article that should go on the front page should be
 %placed here. General acknowledgments should be placed at the end of the article.}
@@ -287,29 +290,50 @@ prepare, commit 단계는 모든 뷰를 거쳐 커밋된 요청들의 순서를 
 각 복제본은 이를 받아 스테이블 체크포인트의 증거 C에 있는 \(n-f\)개의 체크포인트가 올바른지 검증해야 한다.
 이때 최적화를 하지 않을 경우 발생할 수 있는 검증 비용은 \(O(n^{3})\) 이다.
 
+\begin{figure}
+  \includegraphics[width=1\textwidth]{pbft.eps}
+\caption{정상 케이스 동작(Normal Case Operation)}
+\label{fig:1}       %Give a unique label
+\end{figure}
+
 \subsection{HotStuff: BFT Consensus with Linearity and Responsiveness}
 
 \subsection{LibraBFT: BFT Consensus with Linearity and Responsiveness}
-LibraBFT는 비동기 네트워크 환경 safety속성을 보장하는 비잔틴 장애 허용 합의 알고리즘이다.
+LibraBFT는 Libra 블록체인을 위해 비동기 네트워크 환경에서 safety속성을 보장하는 비잔틴 장애 허용 합의 알고리즘이다.
 지리적으로 분산된 데이터베이스 간에 상태 머신 복제를 통해 동일한 프로그래밍 가능한 리소스(programmable resources)을
 유지할 수 있게한다. 다른 상태 머신 복제 알고리즘과 유사하게 
 각 데이터베이스는 순서있는 트랜잭션 목록을 받고 실행하여 동일한 상태를 유지한다.
  이 합의 알고리즘 역시 다른 알고리즘 처럼 \(3f+1\) 개의 노드가 있어야 시스템을 비잔틴 행위로 부터
-시스템을 보호할 수 있다. LibraBFT는 HotStuff 알고리즘을 기반으로하는 알고리즘이다. 즉, 합의 결정 비용은
-단순히 결정을 각 복제본에 전파하는 것 이상의 비용이 들지 않는다. 
-그리고 단일 통신 단게를 중심으로 프로토콜이 구축되어 간결하면서도 견고한 블록체인 구현을 할 수 있게 한다.
+시스템을 보호할 수 있다. LibraBFT는 HotStuff 알고리즘을 기반으로하는 알고리즘이다. HotStuff 장점으로 다음이 있다.
+\begin{itemize}
+  \item 합의 결정 비용은 단순히 결정을 각 복제본에 전파하는 것 이상의 비용이 들지 않는다.
+  \item 단일 통신 단계를 중심으로 프로토콜이 구축되어 간결하면서도 견고한 블록체인 구현을 할 수 있게 한다.
+  \item 공개 모집을 통해 새롭게 모집된 노드를 동적으로 시스템에 추가할 수 있다. 
+\end{itemize}
 
-이 프로토콜은 시스템이 초기 설정으로 부터 시작되어 중간 중간에 구성(configuration)을 변경할 수 있도록 설계되어 있다.
-따라서 공개 모집을 통해 새롭게 모집된 노드를 동적으로 시스템에 추가할 수 있다. 
+LibraBFT는 전통적인 라운드 방식을 적용하며 특히 HotStuff의 3단계 합의 방식을 사용한다. 기본적으로 
+각 라운드는 여러개의 단계로 구성되며 이는 라운드 단위로 리더를 지정하고 
+리더가 제안하게 하고 결함없는 검증자가 라운드의 여러 단계에 참여하는 방식이다. 
+첫번째와 두번째 단계에서는 쿼럼 인증서를 만들고 2개의 쿼럼 인증서 체인에 대한 합의가 이뤄지면 커밋에 도달하는 식이다.
+이 방식을 통해 LibraBFT는 낙관적 응답성(optimistic reponsiveness)와 선형성(linearity)을 보장할 수 있다. 
 
+LibraBFT는 체이닝(Chaining) 패러다임을 차용하고 있다. LibraBFT의 3단계는 각 라운드에 퍼져있다.
+예를들어 k라운드에서 리더는 제안에 대한 인증을 진행한다.
+여기서 인증은 쿼럼인증서 생성을 의미한다. k+1 라운드에서는 리더는 제안에 대한 인증을 진행한다.
+동시에 k라운드 쿼럼 인증서에 대한 인증을 진행한다. 따라서 k+1 라운드는 k+1에 대한 쿼럼인증서와 
+k라운드 제안의 쿼럼인증서의 쿼럼인증서를 생성한다. k+2 라운드에서는 쿼럼인증서 생성 뿐만 아니라 k라운드 제안은
+커밋될 수 있는 상태가 된다. Figure ~\ref{fig:2} 와 같이 k+3 라운드가 시작되면서 k라운드에 제안된 명령은
+HotStuff의 DECIDE 단계에 도달하게 되어 명령이 실행되고 커밋된다.
 
+LibraBFT는 리더 기반 알고리즘으로 커밋까지 \(O(n)\) 정도의 메시지 통신 비용이 발생한다. 그리고 비잔틴 노드나
+장애로 인해 특정 라운드가 타웃아웃 되더라도 동일하게 \(O(n)\) 의 메시지 통신 비용이 발생한다.
 
 
 
 \begin{figure}
-    \includegraphics[width=1\textwidth]{pbft.eps}
-\caption{정상 케이스 동작(Normal Case Operation)}
-\label{fig:1}       %Give a unique label
+  \includegraphics[width=0.5\textwidth]{librabft.eps}
+\caption{LibraBFT 단계들은 여러 라운드에 펼쳐져 있음}
+\label{fig:2}       %Give a unique label
 \end{figure}
 
 
@@ -318,7 +342,7 @@ LibraBFT는 비동기 네트워크 환경 safety속성을 보장하는 비잔틴
 \label{sec:11}
 as required. Don't forget to give each section
 and subsection a unique label (see Sect.~\ref{sec:1}).
-\paragraph{Paragraph headings} Use paragraph headings as needed.
+\paragraph{Paragraph headings} Use paragraph headings as needed.qwd 
 \begin{equation}
 a^2+b^2=c^2
 \end{equation}
@@ -334,14 +358,6 @@ a^2+b^2=c^2
   %\end{figure}
 %
 % For two-column wide figures use
-\begin{figure*}
-% Use the relevant command to insert your figure file.
-% For example, with the graphicx package use
-  \includegraphics[width=0.75\textwidth]{example.eps}
-% figure caption is below the figure
-\caption{Please write your figure caption here}
-\label{fig:2}       % Give a unique label
-\end{figure*}
 %
 % For tables use
   %\begin{table}
@@ -361,11 +377,11 @@ a^2+b^2=c^2
 
 \section{토론}
 \label{sec:2}
-Text with citations \cite{RefB} and \cite{RefJ}.
-
+%Text with citations \cite{RefB} and \cite{RefJ}.
+asd asdasd
 \section{결론}
 \label{sec:3}
-Text with citations \cite{RefB} and \cite{RefJ}.
+%Text with citations \cite{RefB} and \cite{RefJ}.
 
 %\begin{acknowledgements}
 %If you'd like to thank anyone, place your comments here
@@ -379,30 +395,32 @@ Text with citations \cite{RefB} and \cite{RefJ}.
 %
 % \section*{Conflict of interest}
 %
-% The authors declare that they have no conflict of interest.
+% The authors declare th at they have no conflict of interest.
 
 
 % BibTeX users please use one of
 %\bibliographystyle{spbasic}      % basic style, author-year citations
 %\bibliographystyle{spmpsci}      % mathematics and physical sciences
-%\bibliographystyle{spphys}       % APS-like style for physics
-%\bibliography{}   % name your BibTeX data base
+\bibliographystyle{spphys}       % APS-like style for physics
+\bibliography{test}         % qhe.bib is the name of our database
+% name your BibTeX data base asd
 
-% Non-BibTeX users please use
-\begin{thebibliography}{asdf}
+% Non-BibTeX users please use  
+  %\begin{thebibliography}{asdf}
 %
 % and use \bibitem to create references. Consult the Instructions
 % for authors for reference list style.
 %
-\bibitem{RefJ}
+  %\bibitem{RefJ}
 % Format for Journal Reference
-Author, Article title, Journal, Volume, page numbers (year)
+  %Author, Article title, Journal, Volume, page numbers (year)
 % Format for books
-\bibitem{RefB}
-Author, Book title, page numbers. Publisher, place (year)
+  %\bibitem{RefB}
+  %Author, Book title, page numbers. Publisher, place (year)
 % etc
-\end{thebibliography}
-
+  %\end{thebibliography}
+        % qhe.bib is the name of our database
+     
 \end{document}
 % end of file template.tex
 
