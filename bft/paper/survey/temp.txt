@@ -1,0 +1,8 @@
+@book{key ,
+author = {M Castro, B Liskov},
+title = {Practical Byzantine Fault Tolerance},
+publisher = {Dilbert Books},
+address = {Cambridge MA},
+url = {http://cs.brown.edu/courses/cs296-2/papers/bft-nfs.pdf},
+year = {1999}
+}
