@@ -1,73 +1,29 @@
-%%%%%%%%%%%%%%%%%%%%%%% file template.tex %%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% This is a general template file for the LaTeX package SVJour3
-% for Springer journals.          Springer Heidelberg 2010/09/16
-%
-% Copy it to a new file with a new name and use it as the basis
-% for your article. Delete % signs as needed.
-%
-% This template includes a few options for different layouts and
-% content for various journals. Please consult a previous issue of
-% your journal as needed.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% First comes an example EPS file -- just ignore it and
-% proceed on the \documentclass line
-% your LaTeX will extract the file if required
-\begin{filecontents*}{example.eps}
-%!PS-Adobe-3.0 EPSF-3.0
-%%BoundingBox: 19 19 221 221
-%%CreationDate: Mon Sep 29 1997
-%%Creator: programmed by hand (JK)
-%%EndComments
-gsave
-newpath
-  20 20 moveto
-  20 220 lineto
-  220 220 lineto
-  220 20 lineto
-closepath
-2 setlinewidth
-gsave
-  .4 setgray fill
-grestore
-stroke
-grestore
-\end{filecontents*}
+
 %
 \RequirePackage{fix-cm}
 %
-%\documentclass{svjour3}                     % onecolumn (standard format)
-%\documentclass[smallcondensed]{svjour3}     % onecolumn (ditto)
-\documentclass[smallextended]{svjour3}       % onecolumn (second format)
-%\documentclass[twocolumn]{svjour3}          % twocolumn
-%
+\documentclass[table,smallextended]{svjour3}       % onecolumn (second format)
 \usepackage{kotex}                           % https://crmn.tistory.com/34
 
 \smartqed  % flush right qed marks, e.g. at end of proof
 %
 \usepackage{graphicx}
-%
-% \usepackage{mathptmx}      % use Times fonts if available on your TeX system
-%
-% insert here the call for the packages your document requires
-%\usepackage{latexsym}
-% etc.
-%
-% please place your own definitions here and don't use \def but
-% \newcommand{}{}
-%
-% Insert the name of "your journal" with
-% \journalname{myjournal}
-%
+\usepackage{algorithm}
+\usepackage{arevmath}     % For math symbols
+\usepackage[noend]{algpseudocode}
+\usepackage[margin=1.5in]{geometry}    % For margin alignment
+
+
+%TABLE
+\usepackage{PTSansNarrow}
+\usepackage[T1]{fontenc}
+\usepackage{array,tabularx}
+\usepackage[most]{tcolorbox}
+
 
 \begin{document}
 
-\title{비잔틴 장애를 허용하는 실용적인 상태 복제 알고리즘에 대한 조사 및 분석%\thanks{Grants or other notes
-%about the article that should go on the front page should be
-%placed here. General acknowledgments should be placed at the end of the article.}
-}
+\title{비잔틴 장애 허용 상태 복제 알고리즘 조사 및 분석을 통한 분산 프로그래밍 언어 설계 가능성}
 % \subtitle{Do you have a subtitle?\\ If so, write it here}
 
 %\titlerunning{Short form of title}        % if too long for running head
@@ -79,12 +35,12 @@ grestore
 %\authorrunning{Short form of author list} % if too long for running head
 
 \institute{최창원 \at
-              충남대학교
+              충남대학교 PLAS LAB,
               \email{qwefgh90@naver.com}           %  \\
 %             \emph{Present address:} of F. Author  %  if needed
            \and
               조은선 \at
-              충남대학교
+              충남대학교 PLAS LAB,
               \email{eschough@cnu.ac.kr}
 }
 
@@ -95,32 +51,29 @@ grestore
 \maketitle
 
 \renewcommand{\abstractname}{초록}
+\renewcommand{\refname}{참조}
 \begin{abstract}
+현재 연구주제로 고려하고 있는 것은 분산 시스템 개발용 언어 개발이다. 이러한 분산 시스템을 위한 언어를 개발한다는 것은
+분산 시스템을 설계하는 것과 유사하다고 생각한다. 예를들어 한 노드에서 다른 노드의 메서드를 원격 호출한 경우 
+양쪽의 상태를 동시에 갱신해야할 수도 있고 같은 네트워크에 참여 중인 노드의 상태를 변경해야하는 경우도 있을 것이다.
+이렇게 각 노드, 프로세스, 컴포넌트가 어떻게 서로 통신을 하고 상태를 동기화 하는지 연구를 할 필요가 있다.
 본 서베이 논문은 비잔틴 장애를 허용(Byzantine-fault-tolerant)하는 
 상태 머신 복제(State Machine Replication) 알고리즘과 블록체인의 분산 원장에 활용되는 기술 등을 다룬다. 
-많은 수의 기업들은 정보 시스템을 활용하는 사업 아이템을 구상하고 있으며
-IT 시스템에 대한 의존성은 높아지고 있다.
-그리고 개발 비용을 절감하면서 생산성을 높이고 더 안정적인 시스템을 구축하기위해
-타사의 API 서비스나 클라우드를 이용하여 새로운 시스템을 개발하는 추세이다.
-그래서 현대의 대부분의 서비스는 분산된 노드가 서로 정보를 주고 받으며 동작한다.
+현대의 대부분의 서비스는 분산된 노드가 서로 정보를 주고 받으며 동작한다.
 이 과정에서 분산된 노드간에 동일한 설정 유지할때나 하나의 상태를 갖는 분산 컴포넌트를 개발할때
-상태 머신 복제 알고리즘은 중요한 역할을 하게 된다.
-상태 복제 알고리즘은 오랫동안 연구되어 왔으며 최근 블록체인의
+상태 머신 복제 알고리즘은 중요한 역할을 하게 된다. 상태 복제 알고리즘은 오랫동안 연구되어 왔으며 최근 블록체인의
 발전으로 그 중요성이 부각되고 있다. 또한 HotStuff 같은 알고리즘의 등장으로 성능이 획기적으로
 개선되기도 하였다. 이 서베이 논문은 비잔틴 장애 허용 알고리즘을 다루고
 알고리즘 간에 성능 및 장단점을 비교하여 설명한다.
 
-% \keywords{First keyword \and Second keyword \and More}
-% \PACS{PACS code1 \and PACS code2 \and more}
-% \subclass{MSC code1 \and MSC code2 \and more}
 \end{abstract}
 
 \section{서론}
 \label{intro}
-소프트웨어의 이미 제작된 컴포넌트를 재활용할 수 있는 장점 덕분에 
+소프트웨어의 재활용성 덕분에 
 아이디어만 있다면 새로운 앱을 구현하는데 많은 시간을 들이지 않을 수 있다.
 언어와 개발 도구의 발달, 오픈소스와 생태계의 발전, 웹 기술의 발전은 
-재활용 가능한 소프트웨어를 누구나 쉽게 구현하고 제공할 수 있게 하였다.
+재활용 가능한 소프트웨어를 누구나 쉽게 소비하거나 또는 생산자로서 구현하고 배포할 수 있게 하였다.
 단순한 라이브러리나 프레임워크 수준을 넘어선 API 서비스의 등장으로
 코드 뿐만 아니라 서비스 자체를 재활용하는 것이 가능해졌다. 분산된 노드의
 통신이 빈번한 환경에서는 악의적인 공격자에 의해 해킹을 당하기 쉽다.
@@ -138,17 +91,19 @@ IT 시스템에 대한 의존성은 높아지고 있다.
 항상 시스템을 보호해주는 알고리즘은 아니고 \(3f+1\)개의 노드 중 f개 이하로 
 결함있는 노드가 유지될때 문제없이 상태를 복제할 수 있게한다.
 
-흔히 알려진 것 처럼 상태 머신 복제 시스템은 safety와 liveness 성질을 가
-지고 있어야 한다. safety는 사용자가 전송한 시스템의 상태를 갱신하는 일련의
+흔히 알려진 것 처럼 상태 머신 복제 시스템은 safety와 liveness 성질을 가지고 있어야 한다.
+safety는 사용자가 전송한 시스템의 상태를 갱신하는 일련의
 명령을 모든 노드가 동일한 순서대로 실행하여 같은 상태를 갖게해주는 능력이다.
 liveness는 사용자 요청에 대한 응답을 해주는 능력을 의미한다.
 
-동기적인(Synchronous) 모델은 유한한 제한 시간이 있어서 공격자가 결함없는 노드의 메시지를
+동기적인(Synchronous)\cite{Synchron92}\cite{buchman2016tendermint} 모델은 결정된 제한 시간이 있어서 공격자가 결함없는 노드의 메시지를
 그 시간 만큼만 지연시킬 수 있는 모델을 의미한다.
-비동기적인(Asynchronous) 모델은 공격자가 제한할 수 있는 시간에는 제한이 없지만 
-결함없는 노드가 보낸 메시지는 메시지는 결국 도달해야 되는 모델을 의미한다.
-부분 동기화(Partial synchrony) 모델은 일시적인 순간에만 비동기적 모델을 유지하고(공격 받는 상황) 나머지 시간에는 동기적
-속성을 유지하는 모델이다. 이 모델에는 전송 제한 시간과 GST(Global Stabilization Time)이 있다고 가정한다.
+비동기적인(Asynchronous)\cite{Synchron92}\cite{buchman2016tendermint} 모델은 공격자가 제한할 수 있는 시간은 결정되어 있지 않으며
+결함없는 노드가 보낸 메시지는 메시지는 결국 도달하는 모델을 의미한다.
+
+부분 동기화(Partial synchrony)\cite{Synchron92}\cite{buchman2016tendermint} 모델은 일시적인 순간에만 비동기적 모델을 유지하고(공격 받는 상황) 
+GST(Global Stabilization Time) 이후에는 동기적 속성을 유지하는 모델이다.
+GST는 공격자가 이벤트를 발생시키는 예측할 수 없는 특정 시점이다.
 
 \begin{itemize}
   \item GST는 알려지지 않은 유한한 시간이 지난 시점이다.
@@ -163,13 +118,13 @@ liveness는 사용자 요청에 대한 응답을 해주는 능력을 의미한�
 잔액 등)이고, 이 상태를 모두 동일하게 복제하기 위해 상태 머신 복제 알고리즘이
 사용된다.
 
-예를들어 비트코인은 작업증명(Proof of Work) 알고리즘과 Longest Chain
+예를들어 비트코인\cite{nakamoto2019bitcoin}은 작업증명(Proof of Work) 알고리즘과 Longest Chain
 Rule을 활용하여 상태를 복제한다. 여러 복제본이 Proof of Work를 통해 블록 블록을
 찾은 뒤 전파하여 동기화하고 Longest Chain Rule을 이용하여 포크 문제를 해결한다.
 작업증명 알고리즘은 본래 서비스 거부 공격을 방어하기 위해 개발되었지만, 
 비트코인에서 각 노드간 동일한 블록체인을 동기화할때 사용되면서 유명해졌다.
 
-초기 버전 이더리움 같은 경우도 ethash를 적용한 작업증명 알고리즘과 고스트 프로토콜을
+초기 버전 이더리움\cite{buterin2013ethereum} 같은 경우도 ethash를 적용한 작업증명 알고리즘과 고스트 프로토콜을
 이용하여 상태 복제를 수행하고 및 포크 문제를 다루었다. 블록체인은 이처럼 초기에는 
 서비스 거부 공격을 방어할 수 있는 작업증명 같은 보안성이 강한 알고리즘을 채택하였다.
 이러한 시스템을 붕괴하기 위해서는 비잔틴 노드가 전체 노드의 51\% 이상이 되어야 하므로
@@ -181,8 +136,8 @@ Ghost 프로토콜 등을 이용해 이 문제를 다룰 수 있더라도, 한�
 블록을 낭비하는 문제는 여전히 남아있었다. 그래서 이더리움 2.0에서는 지분증명과
 같은 알고리즘을 지원하기 시작하였다.
 
-블록체인 분야에서 사용되기도 하는
-가장 널리 알려진 PBFT(Practical Byzantine Fault Tolerance)는 비동기 환경에서 비잔틴 문제를 해결할 수 있는
+블록체인 분야에서 사용되기도 하는 널리 알려진 PBFT(Practical Byzantine Fault Tolerance)는 
+비동기 환경에서 비잔틴 문제를 해결할 수 있는
 최초의 알고리즘이다. 순서 합의부터 결과 커밋까지 3가지 단계 Pre-Prepare, Prepare,
 Commit로 구성되며 Pre-Prepare과 Prepare 단계는 동일한 순서로 명령이 실
 행되는 것을 보장하며, Prepare과 Commit 단계는 커밋된 명령이 여러 뷰에서
@@ -190,16 +145,16 @@ Commit로 구성되며 Pre-Prepare과 Prepare 단계는 동일한 순서로 명�
 하였다. 현대에 쓰기에는 다소 성능이 느린 문제가 있다.
 
 그리고 2019년 현대 시스템 환경에서 PBFT보다 빠르고 실용적인 리더 기반
-상태 머신 복제 알고리즘 HotStuff가 등장하였다. HotStuff는 리더 기반 프로토
-콜로 부분적으로 동기 모델(Partially Synchronous Model)에서 동작하는 상태
+상태 머신 복제 알고리즘 HotStuff\cite{yin2019hotstuff}가 등장하였다. 
+HotStuff는 리더 기반 프로토콜로 부분적으로 동기 모델(Partially Synchronous Model)에서 동작하는 상태
 머신 복제 알고리즘이다. 네트워크 커뮤니케이션이 동기적일때 네트워크 지연시
 간의 속도에 맞춰 합의에 도달할 수 있게 해주는 responsiveness 속성을 보장한다.
-그리고 복제본의 수에 선형적인 통신 복잡도를 갖는 linearity를 보장한다. 아마
-HotStuff는 위 2가지 속성을 갖는 최초의 부분 동기화 BFT 복제 프로토콜이며,
+그리고 복제본의 수에 선형적인 통신 복잡도를 갖게 해주며 합의 시간이 통신 지연시간 만큼 걸리는
+linearity를 보장한다. 아마 HotStuff는 위 2가지 속성을 갖는 최초의 부분 동기화 BFT 복제 프로토콜이며,
 거대한 복제 서비스에서 활용될 수 있는 여러가지 성능 최적화를 제공한다.
 
-그리고 같은 해인 2019년에 LibraBFT라는 Libra 블록체인을 위한 알고리
-즘이 등장한다. LibraBFT는 HotStuff 알고리즘을 기반으로 몇가지 아이디어가
+그리고 같은 해인 2019년에 LibraBFT라는 Libra 블록체인을 위한 알고리즘이 등장한다.
+LibraBFT는 HotStuff 알고리즘을 기반으로 몇가지 아이디어가
 추가된 알고리즘이다. LibraBFT는 새로운 라운드 동기화 매커니즘을 제공하며,
 결함있는 리더 노드가 존재하더라도 제안이 커밋되는 것을 허용하는 nil-block
 투표 방식 등을 제공한다.
@@ -209,10 +164,8 @@ HotStuff는 위 2가지 속성을 갖는 최초의 부분 동기화 BFT 복제 �
 \label{sec:1}
 주로 블록체인(Blockchain)에서 활용되는 합의(Consensus) 알고리즘이나
 널리 알려진 상태 머신 복제(State Machine Repliacation)을 요약하고
-각 알고리즘의 특징과 장단점 등을 설명할 것이다. 그리고 시스템 설계나
-블록체인을 연구하는 관점에서 각 알고리즘을 분석한 내용을 포함할 것이고
-실제 오픈소스나 실 운영되는 서비스에는 어떤 것이 있고 
-미래에 활용될 수 있는 분야를 제시하고 시나리오도 함께 제시할 것이다.
+각 알고리즘의 특징과 장단점 등을 설명할 것이다. 그리고 상세한
+프로토콜을 설명한다.
 
 \subsection{Practical Byzantine Fault Tolerance}
 정부나 산업에서 점점 정보시스템에 대한
@@ -221,7 +174,7 @@ HotStuff는 위 2가지 속성을 갖는 최초의 부분 동기화 BFT 복제 �
 그래서 자의적인 행동을 하는 비잔틴 행동(Byzantine behavior)으로 부터 시스템을
 보호하는 비잔틴 장애 허용 알고리즘의 중요성이 커지게 되었다.
 
-PBFT(Pratical Byzantine Fault Tolerance)는
+PBFT(Pratical Byzantine Fault Tolerance)\cite{castro1999practical}는
 1999년 Miguel Castro와 Barbara Liskov가 작성한 상태 머신 복제 알고리즘이다.
 당시 이 논문이 발표되기전 소개되었던 알고리즘들은 동기적 환경에서 동작하거나
 실제로 사용되기에는 너무 느렸다. 그래서 인터넷 환경과 같은 비동기 환경에서
@@ -250,7 +203,7 @@ f개의 결함이 있으나 응답하지 않는 노드가 있을 수 있다. 이
 응답하는 노드의 개수보다 많아야 한다. 이는 수식으로 \(n-2f > f\) 즉, \(n >= 3f+1\)로 표현되고
 이 조건이 만족되었을때 위의 2가지 속성이 보장되는 것이다.
 
-이러한 필수적인 가정 외에 가정은 생략한다. primary가 사용자 요청 \textit{m} 받으면서 3단계 프로토콜을 시작한다.
+primary가 사용자 요청 \textit{m} 받으면서 3단계 프로토콜을 시작한다.
 3단계는 pre-prepare, prepare, commit이며 pre-prepare과 prepare 단계는
 같은 뷰에 있는 여러개의 요청 순서를 정렬하기 위해 존재한다.
 prepare, commit 단계는 모든 뷰를 거쳐 커밋된 요청들의 순서를 정렬하기 위해 존재한다.
@@ -261,9 +214,10 @@ prepare, commit 단계는 모든 뷰를 거쳐 커밋된 요청들의 순서를 
 \(d\)는 m의 해시이다. 이때 pre-prepare 메시지는 사용자 요청을 담지 않는데 이는 작게 메시지를 유지할 수 있으며
 요청에 스퀀스 \(n\)이 할당되었다는 증거로 활용되기 때문이다.
 
-백업 복제본이 \(((PRE-PREPARE,v,n,d)_{\sigma_{p}},m)\)를 받아들이기로 했다면 \((PREPARE,v,n,d)_{\sigma_{i}}\)
-을 모든 복제본에 전달하고 메시지 로그에 저장한 뒤 \textit{prepare} 단계로 들어간다. 받아들이지 않기로 했다면
- 아무것도 하지 않는다. primary를 포함한 복제본은 prepare 메시지의 서명을 확인한 뒤 이를 메시지 로그에 추가한다.
+백업 복제본이 \(((PRE-PREPARE,v,n,d)_{\sigma_{p}},m)\)를 받아들이기로 결정 했다면 모든 복제본에
+\((PREPARE,v,n,d)_{\sigma_{i}}\) 을 전달하고 메시지 로그에 저장한 뒤 \textit{prepare} 단계로 들어간다. 
+받아들이지 않기로 했다면 아무것도 하지 않는다.
+primary를 포함한 복제본은 prepare 메시지의 서명을 확인한 뒤 이를 메시지 로그에 추가한다.
 
 이때 복제본이 다음과 같은 조건을 만족하면 \textit{prepared(m,v,n,i)} 상태로 돌입할 수 있다. 
 \begin{itemize}
@@ -295,6 +249,54 @@ prepare, commit 단계는 모든 뷰를 거쳐 커밋된 요청들의 순서를 
 \end{figure}
 
 \subsection{HotStuff: BFT Consensus with Linearity and Responsiveness}
+HotStuff\cite{yin2019hotstuff}은 부분 동기적 모델에서 사용되는 리더 기반 비잔틴 허용 복제 프로토콜이다.
+네트워크 통신이 동기적이고 리더가 올바르다면 네트워크 지연속도와 복제본 수에 선형적인 복잡도를 가지고
+합의에 도달할 수 있다. HotStuff은 다른 BFT 알고리즘 처럼 \(3f+1\) 개의 노드가 있어야 비잔틴 노드와 관계없이
+서비스를 수행할 수 있다. HotStuff은 3단계로 구성된 알고리즘이다. PREPARE, PRE-COMMIT, COMMIT이다.
+
+\textbf{PREPARE 단계.} 새로운 리더가 n-f개의 NEW-VIEW 메시지를 받으면서 단계가 시작된다. 
+NEW-VIEW 메시지는 \textit{viewNumber}로 전환될 때 복제본으로 부터 전달되는 메시지이다.
+리더는 가장 높은 뷰를 갖는 prepareQC를 선택한다. 이는 \textit{highQC}라 불린다. 리더는 CREATELEAF 메서드와
+새로운 제안을 사용하여 \textit{highQC.node}의 꼬리를 확장한다. 메서드는 새로운 리프 노드를 자식으로 두고
+내부에 부모의 해시값을 저장하게 한다. 해당 노드를 포함한 PREPARE 메시지를 생성하여 모든 복제본에 전달한다.
+수신한 복제본은 SAFENODE를 사용하여 이 메시지를 받아들일지 결정한다. 그리고 제안을 서명한 뒤
+PREPARE에 대한 투표를 생성하여 리더에게 보낸다.
+
+\textbf{PRE-COMMIT 단계.} 리더는 \((n-f)\)개의 PREPARE 투표를 받은 뒤 이를 조합하여 \textit{prepareQC}를
+형성한다. 리더는 이 \textit{prepareQC}를 PRE-COMMIT 메시지에 담아 브로드캐스트 한다. 수신한 복제본은 리더에게
+PRE-COMMIT 투표를 서명과 함께 보낸다.
+
+\textbf{COMMIT 단계.} 커밋 단계는 PRE-COMMIT 단계와 비슷하다. 리더는 \((n-f)\) PRE-COMMIT 투표를 수신한 뒤
+(알고리즘1의 2번째 줄)
+이를 조합하여 \textit{precommitQC}를 만든다. (알고리즘1의 4번째 줄) 그리고 이를 COMMIT 메시지와 함께 브로드캐스트한다. 
+(알고리즘1의 5번째 줄)
+이를 수신한 복제본은 COMMIT 메시지에 대한 투표를 보낸다. (알고리즘1의 11번째 줄) 중요한 점은 복제본은 precommitQC에 잠기는 상태가 되는점이다.
+따라서 \textit{lockedQC}라는 변수에 \textit{precommitQC} 를 할당한다. (알고리즘1의 9번째 줄) 이것은 제안에 대한 safety속성을 보장하기 위한
+매우 중요한 작업이다.
+
+\begin{algorithm}
+  \caption{COMMIT 단계}
+  \begin{algorithmic}[1]
+  \State {as a \textbf{leader}}
+    \State \hskip1em wait for \((n-f)\) votes:
+      \State \hskip2em $V \leftarrow \{v | MATCHINGMSG(\textit{v}, PRE-COMMIT, \textit{curView})\}$
+    \State \hskip1em $\textit{precommitQC} \leftarrow QC(\textit{V})$
+    \State \hskip1em broadcast MSG(COMMIT, ⊥, \textit{precommitQC})
+  \State {as a \textbf{replica}}
+    \State \hskip1em wait for message \textit{m} from LEADER(\textit{curView})
+      \State \hskip2em m : MATCHINGQC(\textit{m.justify}, PRE-COMMIT, \textit{curView})
+    \State \hskip1em $\textit{lockedQC} \leftarrow QC(\textit{m.justify})$
+    \State \hskip1em send to LEADER(\textit{curView})
+      \State \hskip2em VOTEMSG(COMMIT, \textit{m.justify.node}, ⊥)
+  \end{algorithmic}
+\end{algorithm}
+
+
+\textbf{DECIDE 단계.} 리더는 \((n-f)\)개의 COMMIT 투표를 받은 뒤 이를 조합하여 \textit{commitQC}를
+형성한다. 그리고 모든 다른 복제본에 전달한다. 복제본은 \textit{commitQC}를 받자말자 이 쿼럼인증서 안에있는
+제안을 확인하고 실행을 한다. 그리고 복제본은 \textit{viewNumber}를 증가시키고 다음 뷰를 시작한다.
+
+
 
 \subsection{LibraBFT: BFT Consensus with Linearity and Responsiveness}
 LibraBFT는 Libra 블록체인을 위해 비동기 네트워크 환경에서 safety속성을 보장하는 비잔틴 장애 허용 합의 알고리즘이다.
@@ -309,24 +311,25 @@ LibraBFT는 Libra 블록체인을 위해 비동기 네트워크 환경에서 saf
   \item 공개 모집을 통해 새롭게 모집된 노드를 동적으로 시스템에 추가할 수 있다. 
 \end{itemize}
 
-LibraBFT는 전통적인 라운드 방식을 적용하며 특히 HotStuff의 3단계 합의 방식을 사용한다. 기본적으로 
-각 라운드는 여러개의 단계로 구성되며 이는 라운드 단위로 리더를 지정하고 
-리더가 제안하게 하고 결함없는 검증자가 라운드의 여러 단계에 참여하는 방식이다. 
-첫번째와 두번째 단계에서는 쿼럼 인증서를 만들고 2개의 쿼럼 인증서 체인에 대한 합의가 이뤄지면 커밋에 도달하는 식이다.
-이 방식을 통해 LibraBFT는 낙관적 응답성(optimistic reponsiveness)와 선형성(linearity)을 보장할 수 있다. 
+LibraBFT\cite{librabft}는 전통적인 라운드 방식을 적용하며 특히 HotStuff의 3단계 합의 방식을 사용한다.
+다른 BFT 알고리즘과 유사하게 각 라운드에는 리더가 지정되고 제안하게 한다. 제안을 받은 각 복제본이 리더가 제안한
+내용에 서명을 하고 투표 형태로 다음 라운드의 리더에게 보내게 된다.
 
-LibraBFT는 체이닝(Chaining) 패러다임을 차용하고 있다. LibraBFT의 3단계는 각 라운드에 퍼져있다.
-예를들어 k라운드에서 리더는 제안에 대한 인증을 진행한다.
-여기서 인증은 쿼럼인증서 생성을 의미한다. k+1 라운드에서는 리더는 제안에 대한 인증을 진행한다.
-동시에 k라운드 쿼럼 인증서에 대한 인증을 진행한다. 따라서 k+1 라운드는 k+1에 대한 쿼럼인증서와 
-k라운드 제안의 쿼럼인증서의 쿼럼인증서를 생성한다. k+2 라운드에서는 쿼럼인증서 생성 뿐만 아니라 k라운드 제안은
-커밋될 수 있는 상태가 된다. Figure ~\ref{fig:2} 와 같이 k+3 라운드가 시작되면서 k라운드에 제안된 명령은
-HotStuff의 DECIDE 단계에 도달하게 되어 명령이 실행되고 커밋된다.
+LibraBFT는 HotStuff\cite{yin2019hotstuff}의 첫번째, 두번째 단계에서 쿼럼 인증서를 만드는 부분을 차용하고 있다. 각 라운드에서 리더는
+쿼럼 인증서를 형성하며 동시에 제안을 형성하여 브로드캐스트하는 것이다. 그리고 이에 대한 투표는 다음 라운드로 넘겨서
+무한히 반복하는 방식이다. Figure ~\ref{fig:2}에 보이는 것처럼 실제 커밋은 3-chain commit 라는 규칙을 따른다.
+
+3-chain commit 룰에 대한 설명은 다음과 같다. LibraBFT의 3단계는 각 라운드에 퍼져있다.
+예를들어 k라운드에서 리더는 새로운 제안을 한다. k+1 라운드에서는 리더는 다시 새로운 제안을 하며
+동시에 k라운드 제안에 대한 투표를 받아서
+k라운드 쿼럼 인증서를 형성하고 대한 인증을 진행한다. k+2 라운드 역시 동일하고 k+1라운드의 인증서를 만든다
+이때 k부터 k+2라운드까지 쿼럼인증서가 연결된 상태가 되어 커밋될 수 있는 상태가 된다.
+Figure ~\ref{fig:2} 와 같이 k+3 라운드가 시작되면서 k라운드에 제안된 명령은 실행되고 커밋된다.
+LibraBFT는 이러한 방식을 통해
+체인 품질, 낙관적 응답성(optimistic reponsiveness)와 선형성(linearity)을 보장할 수 있다. 
 
 LibraBFT는 리더 기반 알고리즘으로 커밋까지 \(O(n)\) 정도의 메시지 통신 비용이 발생한다. 그리고 비잔틴 노드나
 장애로 인해 특정 라운드가 타웃아웃 되더라도 동일하게 \(O(n)\) 의 메시지 통신 비용이 발생한다.
-
-
 
 \begin{figure}
   \includegraphics[width=0.5\textwidth]{librabft.eps}
@@ -334,54 +337,61 @@ LibraBFT는 리더 기반 알고리즘으로 커밋까지 \(O(n)\) 정도의 메
 \label{fig:2}       %Give a unique label
 \end{figure}
 
-
-%Text with citations \cite{RefB} and \cite{RefJ}.
-\subsection{Subsection title}
-\label{sec:11}
-as required. Don't forget to give each section
-and subsection a unique label (see Sect.~\ref{sec:1}).
-\paragraph{Paragraph headings} Use paragraph headings as needed.qwd 
-\begin{equation}
-a^2+b^2=c^2
-\end{equation}
-
-% For one-column wide figures use
-  %\begin{figure}
-% Use the relevant command to insert your figure file.
-% For example, with the graphicx package use
-     %\includegraphics{example.eps}
-% figure caption is below the figure
-  %\caption{Please write your figure caption here}
-  %\label{fig:1}       % Give a unique label
-  %\end{figure}
-%
-% For two-column wide figures use
-%
-% For tables use
-  %\begin{table}
-% table caption is above the table
-  %\caption{Please write your table caption here}
-  %\label{tab:1}       % Give a unique label
-% For LaTeX tables use
-  %\begin{tabular}{lll}
-  %\hline\noalign{\smallskip}
-  %first & second & third  \\
-  %\noalign{\smallskip}\hline\noalign{\smallskip}
-  %number & number & number \\
-  %number & number & number \\
-  %\noalign{\smallskip}\hline
-  %\end{tabular}
-  %\end{table}
-
 \section{토론}
 \label{sec:2}
-%Text with citations \cite{RefB} and \cite{RefJ}.
-asd asd asd
-\cite{castro1999practical}
-\cite{yin2019hotstuff}
-\cite{librabft}
+
+다음은 위에 분석하였던 3개의 알고리즘 성능을 비교할 수 있다. PBFT는 안정적인 리더가 라운드를 진행할때 
+커뮤니케이션과 커밋에 2라운드 트립 비용이 \(O(n^{2})\) 이다.
+리더를 교체할 경우 모든 복제본들은 VIEW-CHANGE 메시지를 브로드캐스트 한다. 이는 다음 뷰 번호를 알 수 없기때문에
+리더에게 직접 보내지 못하기 때문이다. 따라서 메시지를 받은 모든 복제본은 인증서를 검증 하는데 이때 총 \(O(n^{3})\)라는
+적지 않은 비용이 발생한다. 
+
+반면 HotStuff는 같은 제안부터 커밋까지 3단계를 갖는 상태 복제 프로토콜이지만, 
+리더 중심 프로토콜이기 때문에 주고받는 메시지 숫자가 적다. 리더는 새로운 제안을 모든 복제본에 브로드캐스트하고 
+모든 복제본은 그 제안을 받은 뒤 투표를 리더에게만 보낸다. 따라서 복제본이 \textit{N}개라면 \textit{N-1}개의 
+제안을 위한 메시지가 발생하고 \textit{N-1}개의 복제본은 투표를 리더에게 직접 보낸다. 이러한 단계가 총 3단계가
+존재하며 총 통신 비용은 \(O(n)\)이 된다.
+
+여기에 HotStuff은 이 제안-투표하는 것이 반복되는 것을 최적화 하여 CHAINED-HOTSTUFF를 개발하였다.
+같은 \(O(n)\) 이지만 커뮤니케이션 비용이 \(1/3\)로 감소한다. LibraBFT은 이러한 CHAINED-HOTSTUFF를 적용하고 있어서
+성능이 우수하다. 차이점이라면 내부적으로 HotStuff과 다른 자료구조를 이용하고 있다는 점이다.
+
+\rowcolors{1}{black!30}{white}
+\begin{tcolorbox}[enhanced, notitle, clip upper, title={알고리즘 성능비교}, fontupper=\sffamily,%
+    tabularx={>{\cellcolor[gray]{.5}\color{white}}r%
+              >{\centering\arraybackslash}X%
+              >{\centering\arraybackslash}X}]
+  &\cellcolor{black!80}\color{white}올바른 리더 &\cellcolor{black!80}\color{white}결함있는 리더(인증 복잡도) \\
+PBFT\cite{castro1999practical} & \(O(n^{2})\) & \(O(n^{3})\) \\
+HotStuff\cite{yin2019hotstuff} & \(O(n)\)  & \(O(n)\) \\
+LibraBFT\cite{librabft} & \(O(n)\) & \(O(n)\) \\
+\end{tcolorbox}
+
+가장 빠른 HotStuff를 사용한다고 가정하고, 앞에 조사한 내용을 바탕으로
+현재 주제로 잡고있는 분산 프로그래밍 언어에서 2가지 연구과제를 도출할 수 있다.
+
+\textbf{첫째.} 분산된 노드 간의 원격 메서드 호출의 시퀀스와 HotStuff의 각 라운드를 동기화하지 않고 성능을 
+높이면서 안정성을 보장할 수 방법에 대해 연구가 좀더 필요하다. 특정 라운드에서 모든 노드가 동일한 상태에 있으며
+각 노드는 결정적인 연산을 수행하는 노드라고 가정해보자.
+그리고 다른 노드에 메서드 호출 요청을 하고 응답을 받은 뒤 자신의 상태를 갱신한다. 그리고
+이 상태를 모든 노드에 전파해야 하는데 이때 HotStuff 프로토콜을 사용할 수 있다.
+하지만 이런 설계를 가져가면 실제 RPC 실행 시간이 지나치게 길어져서 성능에 문제가 있을 수 있다. 그렇다고 모든 노드가
+동시에 합의하는 방식으로 가자니 그것 역시 성능에 악영향을 끼치게 된다.
+
+\textbf{둘째.} 상태 복제 알고리즘을 완전히 배제하고 트래픽을 최소화하면서 메시지에 프로그램 실행환경을 
+주고 받을 수 있는 방법에 대한 연구도 필요하다. 결국 상태 복제 알고리즘은 3f+1 이라는 조건을 만족했을때
+정상적으로 작업을 처리할 수 있기 때문에, 알고리즘을 적용하는 것 자체가 보안적인 결함이 있다고 할 수 있다.
+
 \section{결론}
 \label{sec:3}
+프로그램 개발에 언어라는 것은 가장 중요한 뼈대이다. 특히 언어에서 런타임이나 VM스펙과 구현체까지 제시해야 하는 
+상황에서는 보안을 가장 최우선으로 고려해야 한다. 만약 위 HotStuff 프로토콜을 RPC를 지원하는 분산된 노드에 적용을
+한다면, 시스템 운영자에게 3f+1 라는 조건에 대해 설명해야할 수 있으며 다른 여러가지 조건등이 만족되어야 한다. 
+이러한 조건들은 다소 기술적인 한계로 보인다. 하지만 컴퓨팅 환경이 과거와 달리 많이 발전하였기 때문에
+동기적 모델이나 부분 동기적 모델을 기반으로한 HotStuff 보다 더 실용적인 알고리즘이 등장하는지 지켜보아야 한다.
+
+
+
 %Text with citations \cite{RefB} and \cite{RefJ}.
 
 %\begin{acknowledgements}
